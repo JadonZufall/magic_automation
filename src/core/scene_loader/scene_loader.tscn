@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
 
 [ext_resource type="Script" uid="uid://bd1gdb41o0vas" path="res://src/core/scene_loader/scene_loader.gd" id="1_mjkxq"]
+[ext_resource type="Script" uid="uid://b647y63vmc8n7" path="res://src/entities/entity_spawn.gd" id="2_8oiry"]
+[ext_resource type="PackedScene" uid="uid://cpfkw5i3bua6b" path="res://src/entities/player_entity.tscn" id="3_hud17"]
 
 [node name="SceneLoader" type="Node" unique_id=530976482]
 script = ExtResource("1_mjkxq")
@@ -8,10 +10,19 @@ script = ExtResource("1_mjkxq")
 [node name="World2D" type="Node2D" parent="." unique_id=1813387249]
 
 [node name="Entities" type="Node2D" parent="World2D" unique_id=466759136]
+unique_name_in_owner = true
 
 [node name="Level" type="Node2D" parent="World2D" unique_id=831580507]
+unique_name_in_owner = true
+
+[node name="EntitySpawn" type="Marker2D" parent="World2D/Level" unique_id=817890327]
+position = Vector2(110, 68)
+script = ExtResource("2_8oiry")
+entity_scene = ExtResource("3_hud17")
+metadata/_custom_type_script = "uid://b647y63vmc8n7"
 
 [node name="Effects" type="Node2D" parent="World2D" unique_id=671607741]
+unique_name_in_owner = true
 
 [node name="Systems" type="Node" parent="." unique_id=88673374]
 

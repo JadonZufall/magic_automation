@@ -11,8 +11,6 @@ script = ExtResource("1_mjkxq")
 
 [node name="Level" type="Node2D" parent="World2D" unique_id=831580507]
 
-[node name="Sprite2D" type="Sprite2D" parent="World2D/Level" unique_id=1085341029]
-
 [node name="Effects" type="Node2D" parent="World2D" unique_id=671607741]
 
 [node name="Systems" type="Node" parent="." unique_id=88673374]

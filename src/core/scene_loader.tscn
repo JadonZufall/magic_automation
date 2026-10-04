@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
+
+[ext_resource type="Script" uid="uid://bd1gdb41o0vas" path="res://src/core/scene_loader.gd" id="1_5i7x3"]
+
+[node name="SceneLoader" type="Node" unique_id=530976482]
+script = ExtResource("1_5i7x3")
+
+[node name="World2D" type="Node2D" parent="." unique_id=1813387249]
+
+[node name="Actors" type="Node2D" parent="World2D" unique_id=466759136]
+
+[node name="Level" type="Node2D" parent="World2D" unique_id=831580507]
+
+[node name="Effects" type="Node2D" parent="World2D" unique_id=671607741]
+
+[node name="Systems" type="Node" parent="." unique_id=88673374]
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=1128772188]
+follow_viewport_enabled = true
+
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=1005424244]
+layer = 100
+follow_viewport_enabled = true
+
+[node name="DebugLayer" type="CanvasLayer" parent="." unique_id=1348826698]
+layer = 128
+follow_viewport_enabled = true

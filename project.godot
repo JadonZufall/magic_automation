@@ -23,6 +23,12 @@ window/stretch/aspect="expand"
 
 project/assembly_name="magic_automation"
 
+[file_customization]
+
+folder_colors={
+"res://assets/textures/development/": "yellow"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

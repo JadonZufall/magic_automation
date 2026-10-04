@@ -7,7 +7,7 @@ script = ExtResource("1_mjkxq")
 
 [node name="World2D" type="Node2D" parent="." unique_id=1813387249]
 
-[node name="Actors" type="Node2D" parent="World2D" unique_id=466759136]
+[node name="Entities" type="Node2D" parent="World2D" unique_id=466759136]
 
 [node name="Level" type="Node2D" parent="World2D" unique_id=831580507]
 

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
 
-[ext_resource type="Script" uid="uid://bd1gdb41o0vas" path="res://src/core/scene_loader.gd" id="1_5i7x3"]
+[ext_resource type="Script" uid="uid://bd1gdb41o0vas" path="res://src/core/scene_loader/scene_loader.gd" id="1_mjkxq"]
 
 [node name="SceneLoader" type="Node" unique_id=530976482]
-script = ExtResource("1_5i7x3")
+script = ExtResource("1_mjkxq")
 
 [node name="World2D" type="Node2D" parent="." unique_id=1813387249]
 

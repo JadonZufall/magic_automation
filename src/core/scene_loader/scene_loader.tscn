@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
+[gd_scene format=4 uid="uid://dyh8f5p10p7hl"]
 
 [ext_resource type="Script" uid="uid://bd1gdb41o0vas" path="res://src/core/scene_loader/scene_loader.gd" id="1_mjkxq"]
 [ext_resource type="Script" uid="uid://7gkr5jc1ds0r" path="res://src/core/level/tilemap_level/timemap_level.gd" id="2_hud17"]
@@ -22,6 +22,7 @@ script = ExtResource("2_hud17")
 metadata/_custom_type_script = "uid://7gkr5jc1ds0r"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="World2D/Level/TilemapLevel" unique_id=790277990]
+tile_map_data = PackedByteArray("AAAAAAAAAwAAAAAAAAABAP//AwAAAAAAAAABAAAAAwAAAAAAAAACAAAAAwAAAAAAAAACAP//AwAAAAAAAAAAAP//AwAAAAAAAAACAAEAAwAAAAAAAAABAAEAAwAAAAAAAAAAAAEAAwAAAAAAAAADAAEAAwAAAAAAAAADAP//AwAAAAAAAAADAAAAAwAAAAAAAAAEAAAAAwADAAAAAAAEAP//AwADAAAAAAAEAAEAAwADAAAAAAA=")
 tile_set = ExtResource("3_8gsoq")
 
 [node name="Effects" type="Node2D" parent="World2D" unique_id=671607741]

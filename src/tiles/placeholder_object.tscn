@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://blbfwk6dlh6xw"]
+
+[ext_resource type="Texture2D" uid="uid://bv111ycn7o5ss" path="res://assets/textures/development/placeholder_64x64.tres" id="1_ique4"]
+
+[node name="PlaceholderFloor" type="Sprite2D" unique_id=1770675405]
+texture = ExtResource("1_ique4")

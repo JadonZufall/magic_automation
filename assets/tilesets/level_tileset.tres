@@ -1,0 +1,23 @@
+[gd_resource type="TileSet" format=3 uid="uid://g0xwcibfejuy"]
+
+[ext_resource type="PackedScene" uid="uid://blbfwk6dlh6xw" path="res://src/tiles/placeholder_object.tscn" id="1_raygs"]
+[ext_resource type="Texture2D" uid="uid://1mltvfun0oiq" path="res://assets/textures/terrain_atlas_64x64.tres" id="2_tdn0j"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_3lvw5"]
+resource_name = "Objects"
+scenes/1/scene = ExtResource("1_raygs")
+scenes/1/display_placeholder = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ti6ne"]
+texture = ExtResource("2_tdn0j")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_3lvw5")
+sources/3 = SubResource("TileSetAtlasSource_ti6ne")

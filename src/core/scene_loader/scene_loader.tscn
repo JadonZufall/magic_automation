@@ -1,19 +1,32 @@
-[gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
+[gd_scene format=4 uid="uid://dyh8f5p10p7hl"]
 
 [ext_resource type="Script" uid="uid://bd1gdb41o0vas" path="res://src/core/scene_loader/scene_loader.gd" id="1_mjkxq"]
+[ext_resource type="Script" uid="uid://7gkr5jc1ds0r" path="res://src/core/level/tilemap_level/timemap_level.gd" id="2_hud17"]
+[ext_resource type="TileSet" uid="uid://g0xwcibfejuy" path="res://assets/tilesets/level_tileset.tres" id="3_8gsoq"]
 
 [node name="SceneLoader" type="Node" unique_id=530976482]
 script = ExtResource("1_mjkxq")
 
 [node name="World2D" type="Node2D" parent="." unique_id=1813387249]
 
-[node name="Actors" type="Node2D" parent="World2D" unique_id=466759136]
+[node name="Camera2D" type="Camera2D" parent="World2D" unique_id=1027216674]
+
+[node name="Entities" type="Node2D" parent="World2D" unique_id=466759136]
+unique_name_in_owner = true
 
 [node name="Level" type="Node2D" parent="World2D" unique_id=831580507]
+unique_name_in_owner = true
 
-[node name="Sprite2D" type="Sprite2D" parent="World2D/Level" unique_id=1085341029]
+[node name="TilemapLevel" type="Node2D" parent="World2D/Level" unique_id=2036039217]
+script = ExtResource("2_hud17")
+metadata/_custom_type_script = "uid://7gkr5jc1ds0r"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="World2D/Level/TilemapLevel" unique_id=790277990]
+tile_map_data = PackedByteArray("AAAAAAAAAwAAAAAAAAABAP//AwAAAAAAAAABAAAAAwAAAAAAAAACAAAAAwAAAAAAAAACAP//AwAAAAAAAAAAAP//AwAAAAAAAAACAAEAAwAAAAAAAAABAAEAAwAAAAAAAAAAAAEAAwAAAAAAAAADAAEAAwAAAAAAAAADAP//AwAAAAAAAAADAAAAAwAAAAAAAAAEAAAAAwADAAAAAAAEAP//AwADAAAAAAAEAAEAAwADAAAAAAA=")
+tile_set = ExtResource("3_8gsoq")
 
 [node name="Effects" type="Node2D" parent="World2D" unique_id=671607741]
+unique_name_in_owner = true
 
 [node name="Systems" type="Node" parent="." unique_id=88673374]
 

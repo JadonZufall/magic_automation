@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" format=3 uid="uid://g0xwcibfejuy"]
 
-[ext_resource type="PackedScene" uid="uid://blbfwk6dlh6xw" path="res://src/tiles/placeholder_floor.tscn" id="1_raygs"]
+[ext_resource type="PackedScene" uid="uid://blbfwk6dlh6xw" path="res://src/tiles/placeholder_object.tscn" id="1_raygs"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_3lvw5"]
-resource_name = "Floors"
+resource_name = "Objects"
 scenes/1/scene = ExtResource("1_raygs")
 scenes/1/display_placeholder = true
 

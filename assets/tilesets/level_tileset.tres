@@ -1,0 +1,12 @@
+[gd_resource type="TileSet" format=3 uid="uid://g0xwcibfejuy"]
+
+[ext_resource type="PackedScene" uid="uid://blbfwk6dlh6xw" path="res://src/tiles/placeholder_floor.tscn" id="1_raygs"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_3lvw5"]
+resource_name = "Floors"
+scenes/1/scene = ExtResource("1_raygs")
+scenes/1/display_placeholder = true
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_3lvw5")

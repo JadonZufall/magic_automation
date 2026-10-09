@@ -7,4 +7,4 @@ The NPCs of the world could also be directly tied to progression. Major mileston
 
 Initially, the player would need to work around the limited space, but eventually they would unlock new avenues to workaround these such as spatial rooms.
 
-I am also playing around with the idea of dungeons. Certain progressions could be locked behind procedurally generated dungeons. These could contain resources that need to be secured from various threats such as enemies or natural hazards. Various things that can be produced in the factory could 
+I am also playing around with the idea of dungeons. Certain progressions could be locked behind procedurally generated dungeons. These could contain resources that need to be secured from various threats such as enemies or natural hazards. Various things that can be produced in the factory could used to help clear and secure these dungeons.

@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
 
 [ext_resource type="Script" uid="uid://c8lq7wp2ac6ja" path="res://src/camera_controller.gd" id="2_2hihr"]
+[ext_resource type="PackedScene" uid="uid://cpfkw5i3bua6b" path="res://scenes/player_entity.tscn" id="2_m85m7"]
 
 [node name="SceneLoader" type="Node" unique_id=530976482]
+
+[node name="Systems" type="Node" parent="." unique_id=88673374]
 
 [node name="World2D" type="Node2D" parent="." unique_id=1813387249]
 
@@ -17,13 +20,13 @@ debug_speed_value = NodePath("../../DebugLayer/Control/HBoxContainer/VBoxContain
 [node name="Entities" type="Node2D" parent="World2D" unique_id=466759136]
 unique_name_in_owner = true
 
+[node name="PlayerEntity" parent="World2D/Entities" unique_id=1232079873 instance=ExtResource("2_m85m7")]
+
 [node name="Level" type="Node2D" parent="World2D" unique_id=831580507]
 unique_name_in_owner = true
 
 [node name="Effects" type="Node2D" parent="World2D" unique_id=671607741]
 unique_name_in_owner = true
-
-[node name="Systems" type="Node" parent="." unique_id=88673374]
 
 [node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=1128772188]
 

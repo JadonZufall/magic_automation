@@ -1,32 +1,19 @@
-[gd_scene format=4 uid="uid://dyh8f5p10p7hl"]
+[gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
 
-[ext_resource type="Script" uid="uid://bd1gdb41o0vas" path="res://src/scene_loader.gd" id="1_mjkxq"]
-[ext_resource type="TileSet" uid="uid://g0xwcibfejuy" path="res://assets/tilesets/level_tileset.tres" id="3_8gsoq"]
-
-[sub_resource type="GDScript" id="GDScript_8oiry"]
-script/source = "class_name TilemapLevel extends Level2D
-"
+[ext_resource type="Script" uid="uid://c8lq7wp2ac6ja" path="res://src/camera_controller.gd" id="2_2hihr"]
 
 [node name="SceneLoader" type="Node" unique_id=530976482]
-script = ExtResource("1_mjkxq")
 
 [node name="World2D" type="Node2D" parent="." unique_id=1813387249]
 
 [node name="Camera2D" type="Camera2D" parent="World2D" unique_id=1027216674]
+script = ExtResource("2_2hihr")
 
 [node name="Entities" type="Node2D" parent="World2D" unique_id=466759136]
 unique_name_in_owner = true
 
 [node name="Level" type="Node2D" parent="World2D" unique_id=831580507]
 unique_name_in_owner = true
-
-[node name="TilemapLevel" type="Node2D" parent="World2D/Level" unique_id=2036039217]
-script = SubResource("GDScript_8oiry")
-metadata/_custom_type_script = "uid://7gkr5jc1ds0r"
-
-[node name="TileMapLayer" type="TileMapLayer" parent="World2D/Level/TilemapLevel" unique_id=790277990]
-tile_map_data = PackedByteArray("AAAAAAAAAwAAAAAAAAABAP//AwAAAAAAAAABAAAAAwAAAAAAAAACAAAAAwAAAAAAAAACAP//AwAAAAAAAAAAAP//AwAAAAAAAAACAAEAAwAAAAAAAAABAAEAAwAAAAAAAAAAAAEAAwAAAAAAAAADAAEAAwAAAAAAAAADAP//AwAAAAAAAAADAAAAAwAAAAAAAAAEAAAAAwADAAAAAAAEAP//AwADAAAAAAAEAAEAAwADAAAAAAA=")
-tile_set = ExtResource("3_8gsoq")
 
 [node name="Effects" type="Node2D" parent="World2D" unique_id=671607741]
 unique_name_in_owner = true

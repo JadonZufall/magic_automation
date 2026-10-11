@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
 
-[ext_resource type="Script" uid="uid://c8lq7wp2ac6ja" path="res://src/camera_controller.gd" id="2_2hihr"]
+[ext_resource type="PackedScene" uid="uid://cmyv21whclhyb" path="res://scenes/camera_entity.tscn" id="1_m85m7"]
 [ext_resource type="PackedScene" uid="uid://cpfkw5i3bua6b" path="res://scenes/player_entity.tscn" id="2_m85m7"]
 
 [node name="SceneLoader" type="Node" unique_id=530976482]
@@ -9,16 +9,16 @@
 
 [node name="World2D" type="Node2D" parent="." unique_id=1813387249]
 
-[node name="Camera2D" type="Camera2D" parent="World2D" unique_id=1027216674 node_paths=PackedStringArray("debug_label", "debug_reset", "debug_speed", "debug_speed_value")]
-anchor_mode = 0
-script = ExtResource("2_2hihr")
-debug_label = NodePath("../../DebugLayer/Control/HBoxContainer/DebugCameraPosition")
-debug_reset = NodePath("../../DebugLayer/Control/HBoxContainer/DebugResetCameraPositionButton")
-debug_speed = NodePath("../../DebugLayer/Control/HBoxContainer/VBoxContainer/CameraSpeedSlider")
-debug_speed_value = NodePath("../../DebugLayer/Control/HBoxContainer/VBoxContainer/DebugSpeedValue")
-
 [node name="Entities" type="Node2D" parent="World2D" unique_id=466759136]
 unique_name_in_owner = true
+
+[node name="CameraEntity" parent="World2D/Entities" unique_id=664916455 instance=ExtResource("1_m85m7")]
+
+[node name="Camera2D" parent="World2D/Entities/CameraEntity" index="0" unique_id=1299680433 node_paths=PackedStringArray("debug_label", "debug_reset", "debug_speed", "debug_speed_value")]
+debug_label = NodePath("../../../../DebugLayer/Control/HBoxContainer/DebugCameraPosition")
+debug_reset = NodePath("../../../../DebugLayer/Control/HBoxContainer/DebugResetCameraPositionButton")
+debug_speed = NodePath("../../../../DebugLayer/Control/HBoxContainer/VBoxContainer/CameraSpeedSlider")
+debug_speed_value = NodePath("../../../../DebugLayer/Control/HBoxContainer/VBoxContainer/DebugSpeedValue")
 
 [node name="PlayerEntity" parent="World2D/Entities" unique_id=1232079873 instance=ExtResource("2_m85m7")]
 
@@ -73,3 +73,5 @@ text = "<CameraSpeed>"
 [node name="DebugCameraPosition" type="Label" parent="DebugLayer/Control/HBoxContainer" unique_id=957735855]
 layout_mode = 2
 text = "<DebugCameraPosition>"
+
+[editable path="World2D/Entities/CameraEntity"]

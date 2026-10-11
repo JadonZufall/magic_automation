@@ -1,1 +1,0 @@
-class_name TilemapLevel extends Level2D

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cpfkw5i3bua6b"]
 
 [ext_resource type="Script" uid="uid://c7cjjr6157lkn" path="res://src/entity.gd" id="1_8b1co"]
+[ext_resource type="Script" uid="uid://ieuo2doq5e7x" path="res://src/components/player_component.gd" id="2_6nmcj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxsxw"]
 
@@ -10,6 +11,10 @@ size = Vector2(20, 20)
 [node name="PlayerEntity" type="Node2D" unique_id=1232079873]
 script = ExtResource("1_8b1co")
 metadata/_custom_type_script = "uid://c7cjjr6157lkn"
+
+[node name="PlayerComponent" type="Node" parent="." unique_id=1821375587]
+script = ExtResource("2_6nmcj")
+metadata/_custom_type_script = "uid://ieuo2doq5e7x"
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1352717930]
 

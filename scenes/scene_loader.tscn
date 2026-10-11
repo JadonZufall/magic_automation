@@ -6,8 +6,13 @@
 
 [node name="World2D" type="Node2D" parent="." unique_id=1813387249]
 
-[node name="Camera2D" type="Camera2D" parent="World2D" unique_id=1027216674]
+[node name="Camera2D" type="Camera2D" parent="World2D" unique_id=1027216674 node_paths=PackedStringArray("debug_label", "debug_reset", "debug_speed", "debug_speed_value")]
+anchor_mode = 0
 script = ExtResource("2_2hihr")
+debug_label = NodePath("../../DebugLayer/Control/HBoxContainer/DebugCameraPosition")
+debug_reset = NodePath("../../DebugLayer/Control/HBoxContainer/DebugResetCameraPositionButton")
+debug_speed = NodePath("../../DebugLayer/Control/HBoxContainer/VBoxContainer/CameraSpeedSlider")
+debug_speed_value = NodePath("../../DebugLayer/Control/HBoxContainer/VBoxContainer/DebugSpeedValue")
 
 [node name="Entities" type="Node2D" parent="World2D" unique_id=466759136]
 unique_name_in_owner = true
@@ -21,12 +26,47 @@ unique_name_in_owner = true
 [node name="Systems" type="Node" parent="." unique_id=88673374]
 
 [node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=1128772188]
-follow_viewport_enabled = true
 
 [node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=1005424244]
 layer = 100
-follow_viewport_enabled = true
 
 [node name="DebugLayer" type="CanvasLayer" parent="." unique_id=1348826698]
 layer = 128
-follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="DebugLayer" unique_id=2002933531]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DebugLayer/Control" unique_id=1279591353]
+layout_mode = 0
+offset_right = 246.0
+offset_bottom = 40.0
+
+[node name="DebugResetCameraPositionButton" type="Button" parent="DebugLayer/Control/HBoxContainer" unique_id=1226700544]
+layout_mode = 2
+text = "Reset"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugLayer/Control/HBoxContainer" unique_id=930318065]
+layout_mode = 2
+
+[node name="CameraSpeedSlider" type="HSlider" parent="DebugLayer/Control/HBoxContainer/VBoxContainer" unique_id=362109266]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+max_value = 10.0
+step = 0.1
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="DebugSpeedValue" type="Label" parent="DebugLayer/Control/HBoxContainer/VBoxContainer" unique_id=1425490197]
+layout_mode = 2
+text = "<CameraSpeed>"
+
+[node name="DebugCameraPosition" type="Label" parent="DebugLayer/Control/HBoxContainer" unique_id=957735855]
+layout_mode = 2
+text = "<DebugCameraPosition>"

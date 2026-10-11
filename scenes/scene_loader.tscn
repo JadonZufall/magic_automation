@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dyh8f5p10p7hl"]
 
-[ext_resource type="PackedScene" uid="uid://cmyv21whclhyb" path="res://scenes/camera_entity.tscn" id="1_m85m7"]
+[ext_resource type="Script" uid="uid://bd1gdb41o0vas" path="res://src/scene_loader.gd" id="1_m85m7"]
+[ext_resource type="PackedScene" uid="uid://cmyv21whclhyb" path="res://scenes/camera_entity.tscn" id="2_js0ie"]
 [ext_resource type="PackedScene" uid="uid://cpfkw5i3bua6b" path="res://scenes/player_entity.tscn" id="2_m85m7"]
 
 [node name="SceneLoader" type="Node" unique_id=530976482]
+script = ExtResource("1_m85m7")
 
 [node name="Systems" type="Node" parent="." unique_id=88673374]
 
@@ -12,9 +14,12 @@
 [node name="Entities" type="Node2D" parent="World2D" unique_id=466759136]
 unique_name_in_owner = true
 
-[node name="CameraEntity" parent="World2D/Entities" unique_id=664916455 instance=ExtResource("1_m85m7")]
+[node name="CameraEntity" parent="World2D/Entities" unique_id=664916455 instance=ExtResource("2_js0ie")]
 
-[node name="Camera2D" parent="World2D/Entities/CameraEntity" index="0" unique_id=1299680433 node_paths=PackedStringArray("debug_label", "debug_reset", "debug_speed", "debug_speed_value")]
+[node name="TrackingComponent" parent="World2D/Entities/CameraEntity" index="0" unique_id=18244148 node_paths=PackedStringArray("target")]
+target = NodePath("../../PlayerEntity")
+
+[node name="Camera2D" parent="World2D/Entities/CameraEntity" index="1" unique_id=1299680433 node_paths=PackedStringArray("debug_label", "debug_reset", "debug_speed", "debug_speed_value")]
 debug_label = NodePath("../../../../DebugLayer/Control/HBoxContainer/DebugCameraPosition")
 debug_reset = NodePath("../../../../DebugLayer/Control/HBoxContainer/DebugResetCameraPositionButton")
 debug_speed = NodePath("../../../../DebugLayer/Control/HBoxContainer/VBoxContainer/CameraSpeedSlider")
@@ -75,3 +80,4 @@ layout_mode = 2
 text = "<DebugCameraPosition>"
 
 [editable path="World2D/Entities/CameraEntity"]
+[editable path="World2D/Entities/PlayerEntity"]

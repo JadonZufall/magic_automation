@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" uid="uid://c7cjjr6157lkn" path="res://src/entity.gd" id="1_wblhg"]
 [ext_resource type="Script" uid="uid://c8lq7wp2ac6ja" path="res://src/camera_controller.gd" id="2_a8y87"]
+[ext_resource type="Script" uid="uid://dh61nk6e63e4t" path="res://src/components/tracking_component.gd" id="2_ug18w"]
 
 [node name="CameraEntity" type="Node2D" unique_id=664916455]
 script = ExtResource("1_wblhg")
 metadata/_custom_type_script = "uid://c7cjjr6157lkn"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1299680433 node_paths=PackedStringArray("debug_label", "debug_reset", "debug_speed", "debug_speed_value")]
-anchor_mode = 0
+[node name="TrackingComponent" type="Node" parent="." unique_id=18244148]
+script = ExtResource("2_ug18w")
+metadata/_custom_type_script = "uid://dh61nk6e63e4t"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1299680433]
 script = ExtResource("2_a8y87")
-debug_label = NodePath("")
-debug_reset = NodePath("")
-debug_speed = NodePath("")
-debug_speed_value = NodePath("")

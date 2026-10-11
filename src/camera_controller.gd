@@ -1,5 +1,6 @@
 extends Camera2D
 
+# TODO: These all need to be moved to components
 @export var debug_label: Label
 @export var debug_reset: Button
 @export var debug_speed: HSlider
